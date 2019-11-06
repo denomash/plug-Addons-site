@@ -9,7 +9,7 @@ import Card from './Card'
 
 const BusinessCards = () => {
     return (
-        <div className='business-section container'>
+        <div className='business-section container u-margin-bottom-big'>
             <div className='u-margin-bottom-medium'>
                 <h3 className='business__header u-margin-bottom-medium'>Our Business</h3>
                 
@@ -34,23 +34,22 @@ const BusinessCards = () => {
                 <div className='business__cards-item'>
                     <div  className='business__card-section business__info-content u-margin-bottom-medium'>
 
-<div className='business__card'>
-    <div className='business__card-img u-margin-bottom-small'>
-        <img className='business__card-avatar' src={meeting} alt='meeting' />
-    </div>
-    <div className='business__card-header u-margin-bottom-small'>
-        Meeting
-    </div>
-    <div className='business__card-content'>
-        Lorem ipsum dolor sit amet, consectetur 
-        adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua.
-    </div>
+                        <div className='business__card'>
+                            <div className='business__card-img u-margin-bottom-small'>
+                                <img className='business__card-avatar' src={meeting} alt='meeting' />
+                            </div>
+                            <div className='business__card-header u-margin-bottom-small'>
+                                Meeting
+                            </div>
+                            <div className='business__card-content'>
+                                Lorem ipsum dolor sit amet, consectetur 
+                                adipiscing elit, sed do eiusmod tempor incididunt 
+                                ut labore et dolore magna aliqua.
+                            </div>
 
-</div>
-</div>
+                        </div>
+                        </div>
 
-                    {/* Card 2 */}
                     <Card avatar={growth} title='Business Groth' />
 
                 </div>
