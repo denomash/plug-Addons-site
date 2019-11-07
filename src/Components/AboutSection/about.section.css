@@ -1,0 +1,30 @@
+.about-section {
+  display: flex;
+  background: rgba(240, 240, 240, 1);
+  height: 800px;
+  flex-direction: column;
+}
+
+.about-section__content {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-section__content--img {
+  display: flex;
+  height: 492px;
+  width: 80%;
+}
+
+.about-section__content--avatar {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.about-section__content--info {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0 0 0 40px;
+}

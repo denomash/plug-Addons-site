@@ -14,7 +14,7 @@
 .business__info {
   display: flex;
   color: rgba(156, 157, 157, 1);
-
+  line-height: 22px;
   width: 100%;
   justify-content: center;
   font-weight: 300;

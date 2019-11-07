@@ -32,8 +32,12 @@ body {
   margin-bottom: 55px !important;
 }
 
+.u-margin-top-small {
+  margin-top: 15px !important;
+}
+
 .u-margin-top-big {
-  margin-top: 8rem !important;
+  margin-top: 55px !important;
 }
 
 .u-margin-top-huge {
@@ -55,4 +59,9 @@ body {
   height: 35px;
   width: 100px;
   border-radius: 5px;
+}
+
+.btn-yellow {
+  background: rgba(252, 187, 44, 1);
+  font-weight: 500;
 }
