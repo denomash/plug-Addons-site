@@ -1,0 +1,162 @@
+.about-section {
+  display: flex;
+  background: rgba(240, 240, 240, 1);
+  height: 1300px;
+  flex-direction: column;
+}
+
+.about-section__content {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-section__content--img {
+  display: flex;
+  height: 492px;
+  width: 80%;
+}
+
+.about-section__content--avatar {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.about-section__content--info {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin: 0 0 0 40px;
+}
+
+/* cards */
+
+.numbered-cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.numbered-cards > div:not(:last-child) {
+  margin-right: 45px;
+}
+
+.numbered-card {
+  display: flex;
+  height: 45px;
+  width: 192px;
+  /* margin-right: 45px; */
+}
+
+.numbered {
+  display: flex;
+  color: #fff;
+  background: #e92343;
+  width: 55px;
+  align-items: center;
+  justify-content: center;
+}
+
+.numbered-service {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(156, 157, 157, 1);
+  line-height: 22px;
+  width: 70%;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* About business cards */
+
+.line-dots {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.line {
+  background: rgba(252, 187, 44, 1);
+  height: 1.6px;
+  width: 700px;
+}
+
+.dot-container {
+  position: absolute;
+  display: flex;
+  width: 124%;
+  justify-content: space-evenly;
+}
+
+.dot {
+  display: flex;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #e92343;
+}
+
+.about-cards {
+  display: flex;
+  justify-content: space-between;
+}
+.about-cards__content {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  align-items: center;
+}
+
+.about-cards__content--top {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background: #e92343;
+  height: 150px;
+  width: 100%;
+}
+
+.about-cards__content--top-img {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.about-cards__content--top-avatar {
+  width: 55%;
+}
+
+.about-cards__content--body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background: rgba(240, 240, 240, 0.8);
+  padding: 0 15px;
+  width: 100%;
+  box-shadow: 0 3px 6px rgba(45, 45, 45, 0.2);
+}
+
+.about-cards__content--body-title {
+  color: rgba(101, 101, 101, 0.8);
+  display: flex;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 25px 25px;
+}
+
+.up-arrow {
+  border-color: #e92343 transparent;
+  border-style: solid;
+  border-width: 0px 20px 20px 20px;
+  height: 0px;
+  width: 0px;
+}

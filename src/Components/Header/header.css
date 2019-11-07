@@ -8,9 +8,22 @@
     url('../../assets/gg.jpg') no-repeat;
   background-size: cover;
   background-position: top;
-  height: 100vh;
+  height: 88vh;
   width: 100vw;
 }
+
+/* .header__clip { */
+/* width: 100%;
+  height: 100%;
+  background-color: #6a00ad59;
+  background: linear-gradient(
+    to right,
+    rgba(20, 35, 65, 0.6),
+    rgba(15, 90, 115, 1)
+  );
+  border-radius: 2rem;
+  clip-path: polygon(100% 0, 50% 0, 30% 50%, 50% 100%, 100% 100%); */
+/* } */
 
 .header__top {
   align-items: center;

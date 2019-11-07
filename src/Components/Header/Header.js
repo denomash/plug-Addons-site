@@ -4,6 +4,7 @@ import './header.css'
 const Header = () => {
     return (
         <div className='header u-margin-bottom-medium'>
+            {/* <div className="header__clip"></div> */}
             <div className="header__top container">
                 <div className="header__logo">
                     <span className="header__logo--text">PlugAddons</span>
