@@ -2,6 +2,12 @@ import React from 'react'
 import './about.section.css'
 
 import aboutImg from '../../assets/about.png'
+import team from '../../assets/users.svg'
+import cloud from '../../assets/cloud-computing.svg'
+import lock from '../../assets/lock.svg'
+import location from '../../assets/location.svg'
+
+import AboutCards from './AboutCards'
 
 const AboutBusiness = () => {
     return (
@@ -42,7 +48,7 @@ const AboutBusiness = () => {
                 </div>
 
                 {/* Numbered Cards */}
-                <div className='numbered-cards'>
+                <div className='numbered-cards u-margin-bottom-big'>
                     <div className='numbered-card'>
                         <div className='numbered'>01</div>
                         <div className='numbered-service'>Service1</div>
@@ -63,8 +69,30 @@ const AboutBusiness = () => {
                         <div className='numbered-service'>Service1</div>
                     </div>
                 </div>
+
+                <div className='line-dots u-margin-bottom-medium'>
+                    <div className='dot-container'>
+                    <div className='dot'></div>
+                    <div className='dot'></div>
+                    <div className='dot'></div>
+                    <div className='dot'></div>
+                    </div>
+                    <div className='line'></div>
+                </div>
+
+                {/* About business cards */}
+                <div className='about-cards'>
+                    <AboutCards title='Team' avatar ={team} />
+                    <AboutCards title='Cloud' avatar ={cloud} />
+                    <AboutCards title='Secure' avatar ={lock}  />
+                    <AboutCards title='Location' avatar ={location}  />
+
+                </div>
+
+
             </div>
 
+            
             
             
         </div>

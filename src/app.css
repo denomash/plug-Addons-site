@@ -65,3 +65,19 @@ body {
   background: rgba(252, 187, 44, 1);
   font-weight: 500;
 }
+
+.btn-business {
+  background: transparent;
+  color: rgba(101, 101, 101, 0.8);
+  font-weight: 700;
+
+  height: 35px;
+  width: 100px;
+  border: solid 1px rgba(101, 101, 101, 0.4);
+  transition: background 0.3s;
+}
+
+.btn-business:hover {
+  color: #ffffff;
+  background: rgba(252, 187, 44, 1);
+}
