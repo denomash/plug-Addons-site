@@ -28,3 +28,39 @@
   width: 45%;
   margin: 0 0 0 40px;
 }
+
+/* cards */
+
+.numbered-cards {
+  display: flex;
+  width: 100%;
+}
+
+.numbered-card {
+  display: flex;
+  height: 45px;
+  width: 192px;
+  margin-right: 45px;
+}
+
+.numbered {
+  display: flex;
+  color: #fff;
+  background: #e92343;
+  width: 55px;
+  align-items: center;
+  justify-content: center;
+}
+
+.numbered-service {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: rgba(156, 157, 157, 1);
+  line-height: 22px;
+  width: 70%;
+  font-weight: 400;
+  font-size: 15px;
+}

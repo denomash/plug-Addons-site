@@ -7,7 +7,7 @@ const AboutBusiness = () => {
     return (
         <div className='about-section'>
             <div className='container'>
-                <div className='about-section__content u-margin-top-big'>
+                <div className='about-section__content u-margin-top-big u-margin-bottom-big'>
                     <div className='about-section__content--img'>
                         <img className='about-section__content--avatar' src={aboutImg} alt='about image' />
                     </div>
@@ -39,6 +39,29 @@ const AboutBusiness = () => {
                         <button className='button btn-yellow '>See More</button>
                     </div>
 
+                </div>
+
+                {/* Numbered Cards */}
+                <div className='numbered-cards'>
+                    <div className='numbered-card'>
+                        <div className='numbered'>01</div>
+                        <div className='numbered-service'>Service1</div>
+                    </div>
+
+                    <div className='numbered-card'>
+                        <div className='numbered'>02</div>
+                        <div className='numbered-service'>Service1</div>
+                    </div>
+
+                    <div className='numbered-card'>
+                        <div className='numbered'>05</div>
+                        <div className='numbered-service'>Service1</div>
+                    </div>
+
+                    <div className='numbered-card'>
+                        <div className='numbered'>04</div>
+                        <div className='numbered-service'>Service1</div>
+                    </div>
                 </div>
             </div>
 
