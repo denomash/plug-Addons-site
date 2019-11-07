@@ -12,7 +12,7 @@ const AboutCards = (props) => {
                     </div>
                 </div>
                 <div className='about-cards__content--body'>
-                    <h3 className='about-cards__content--body-title u-margin-top-small u-margin-bottom-small'>
+                    <h3 className='about-cards__content--body-title'>
                         {props.title}
                     </h3>
                     <p className='business__info u-center-text u-margin-bottom-big '>
@@ -20,7 +20,9 @@ const AboutCards = (props) => {
                         adipiscing elit, sed diam nonumy. 
                             
                     </p>
-                    <button className='btn-business btn-yellow u-margin-bottom-small'>Learn More</button>
+                    <div className='u-margin-bottom-medium'>
+                        <button className='btn-business btn-yellow'>Learn More</button>
+                    </div>
                 </div>
 
             </div>

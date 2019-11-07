@@ -70,7 +70,7 @@ const AboutBusiness = () => {
                     </div>
                 </div>
 
-                <div className='line-dots u-margin-bottom-medium'>
+                <div className='line-dots u-margin-bottom-big'>
                     <div className='dot-container'>
                     <div className='dot'></div>
                     <div className='dot'></div>
