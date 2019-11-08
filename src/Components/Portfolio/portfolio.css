@@ -1,0 +1,42 @@
+.portfolio-section {
+  display: flex;
+  height: 550px;
+}
+
+.portfolio-section__projects {
+  align-items: center;
+  color: rgba(101, 101, 101, 1);
+  justify-content: space-evenly;
+  flex-direction: column;
+  display: flex;
+  background: rgba(253, 214, 101, 1);
+  width: 50%;
+}
+
+.portfolio-section__projects--container {
+  display: flex;
+  width: 55%;
+  justify-content: space-between;
+}
+.portfolio-section__projects-row {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-section__projects-row--num {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.portfolio-section__projects-row--desc {
+  font-weight: 100;
+  font-size: 25px;
+  font-family: 'Lato', sans-serif;
+}
+
+.portfolio-section__bio {
+  display: flex;
+  background: rgba(243, 120, 140, 1);
+  width: 50%;
+}

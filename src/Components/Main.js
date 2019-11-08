@@ -3,6 +3,7 @@ import Header from './Header/Header'
 import BusinessCards from './BusinessSection/BusinessCards'
 import AboutBusiness from './AboutSection/AboutBusiness'
 import TeamSection from './TeamSection/TeamSection'
+import Portfolio from './Portfolio/Portfolio'
 
 const Main = () => {
     return (
@@ -11,6 +12,7 @@ const Main = () => {
             <BusinessCards />
             <AboutBusiness />
             <TeamSection />
+            <Portfolio />
         </div>
     )
 }
