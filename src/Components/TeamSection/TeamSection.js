@@ -42,7 +42,22 @@ const TeamSection = () => {
                     </div>
 
                 </div>
-                <div className='team-section__bio'></div>
+                <div className='team-section__bio'>
+                    <div className='team-section__bio--container'>
+                        <h2 className='team-section__bio-name u-margin-bottom-small'>Jhon Cena</h2>
+                        <div className='team-section__bio-line u-margin-bottom-small'></div>
+                        <p className='team-section__bio-title u-margin-bottom-small'>UI/UX Designer</p>
+                        <p className='team-section__bio-info business__info u-margin-top-small u-center-text'>
+                            Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam
+                            incididunt ut labore et dolore magna aliqua. 
+                            Ut enim ad minim veniam
+                        </p>
+
+                    </div>
+                </div>
             </div>
         </div>
     )
