@@ -32,6 +32,17 @@ const NewsSection = () => {
                     <NewsSectionCard image={fez} primary='primary' />
                     <NewsSectionCard image={jak} secondary='secondary' />
                 </div>
+
+                <div className='news-section__dots--container u-margin-top-big u-margin-bottom-big'>
+                    <div className='news-section__dots'>
+                        <div className='news-section__dots-1'></div>
+                        <div className='news-section__dots-1'></div>
+                        <div className='news-section__dots-2'></div>
+                        <div className='news-section__dots-1'></div>
+                        <div className='news-section__dots-1'></div>
+                    </div>
+
+                </div>
             </div>
             
         </div>

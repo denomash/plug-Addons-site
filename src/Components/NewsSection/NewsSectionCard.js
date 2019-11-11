@@ -42,7 +42,7 @@ const Month = styled.p`
 `
 
 const CardImg = styled.div`
-    height: 190px;
+    height: 200px;
     width: 100%;
 `
 
