@@ -82,3 +82,7 @@ body {
   color: #ffffff;
   background: rgba(252, 187, 44, 1);
 }
+
+.to-white {
+  color: #ffffff !important;
+}
