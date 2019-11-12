@@ -6,6 +6,7 @@ import TeamSection from './TeamSection/TeamSection'
 import Portfolio from './Portfolio/Portfolio'
 import NewsSection from './NewsSection/NewsSection'
 import ContactSection from './ContactSection/ContactSection'
+import Footer from './Footer/Footer'
 
 const Main = () => {
     return (
@@ -17,6 +18,7 @@ const Main = () => {
             <Portfolio />
             <NewsSection />
             <ContactSection />
+            <Footer />
         </div>
     )
 }
