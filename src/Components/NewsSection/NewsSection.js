@@ -11,7 +11,7 @@ const NewsSection = () => {
     return (
         <div className='news-section'>
             <div className='container'>
-                <div className='u-margin-top-medium'>
+                <div className='u-margin-top-big'>
                     <h3 className='business__header u-margin-bottom-medium'>News Section</h3>
                     
                     <div className='business__info u-center-text'>
