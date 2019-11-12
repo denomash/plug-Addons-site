@@ -5,6 +5,7 @@ import AboutBusiness from './AboutSection/AboutBusiness'
 import TeamSection from './TeamSection/TeamSection'
 import Portfolio from './Portfolio/Portfolio'
 import NewsSection from './NewsSection/NewsSection'
+import ContactSection from './ContactSection/ContactSection'
 
 const Main = () => {
     return (
@@ -15,6 +16,7 @@ const Main = () => {
             <TeamSection />
             <Portfolio />
             <NewsSection />
+            <ContactSection />
         </div>
     )
 }
