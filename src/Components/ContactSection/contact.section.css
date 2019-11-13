@@ -47,6 +47,10 @@
   color: #ffffff;
 }
 
+.contact-section__form--input:focus {
+  outline: none;
+}
+
 .contact-section__form--btn {
   align-items: center;
   justify-content: center;
