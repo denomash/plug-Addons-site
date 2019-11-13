@@ -42,7 +42,7 @@ const AboutBusiness = () => {
                             
                         </p>
 
-                        <button className='button btn-yellow '>See More</button>
+                        <div className='btn-about btn-yellow'>See More</div>
                     </div>
 
                 </div>

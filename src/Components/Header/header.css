@@ -46,6 +46,7 @@
 
 .header__nav li {
   color: #fff;
+  cursor: pointer;
   float: left;
   font-size: 13px;
   padding: 0 10px 0 10px;

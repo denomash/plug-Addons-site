@@ -55,14 +55,34 @@ body {
 }
 
 .button,
-.button:visited {
+.button:visited,
+.button::after {
   background: transparent;
   color: #ffffff;
   font-weight: 700;
 
   height: 35px;
   width: 100px;
+  border: 1px solid #ffffff;
+
   border-radius: 5px;
+}
+
+.button:focus,
+.button:active {
+  border: 1px solid #ffffff;
+  outline: none;
+}
+
+.btn-about {
+  display: flex;
+  color: #ffffff;
+  height: 35px;
+  width: 100px;
+  border-radius: 5px;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-yellow {
@@ -83,8 +103,13 @@ body {
 }
 
 .btn-business:hover {
+  border: none;
   color: #ffffff;
   background: rgba(252, 187, 44, 1);
+}
+
+.btn-business:focus {
+  outline: none;
 }
 
 .to-white {

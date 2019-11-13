@@ -1,4 +1,11 @@
 .footer {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
+    ),
+    url('../../assets/luca.jpg');
+
+  background-size: cover;
   display: flex;
   height: 490px;
   align-items: center;
@@ -58,10 +65,16 @@
 }
 
 .footer__content--form {
-  color: #ffffff;
+  color: rgba(101, 101, 101, 1);
   background: transparent;
   border: solid 1px rgba(101, 101, 101, 0.2);
   padding: 8px 86px;
+  width: 100%;
+}
+
+.footer__content--form:focus {
+  padding: 8px 22px;
+  outline: none;
 }
 
 .footer__content--form::-webkit-input-placeholder {
@@ -81,22 +94,19 @@
 
 .col-4-of-4 {
   display: flex;
-  /* background: orangered; */
   /* width: calc(4 * ((100% - 4 * 10) / 4) + 2 * (10)); */
   width: 215px;
 }
 
 .footer__news {
   display: flex;
+  height: 70px;
 }
 
 .footer__news-img {
   position: relative;
   display: flex;
   color: #ffffff;
-  /* position: absolute;
-    top: 0;
-    left: 0; */
   height: 65px;
   width: 65px;
   background: url('../../assets/pecker.jpg') 20px;
@@ -162,6 +172,13 @@
 }
 
 .footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  font-size: 15px;
+
+  color: #ffffff;
   background: rgba(45, 45, 45, 1);
   height: 30px;
   width: 100vw;

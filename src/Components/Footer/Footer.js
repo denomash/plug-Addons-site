@@ -167,7 +167,9 @@ const Footer = () => {
             
         </div>
         
-        <div className='footer-bottom'></div>
+        <div className='footer-bottom'>
+            Copyright &copy; 2019. All rights reserved.
+        </div>
         </Fragment>
     )
 }
