@@ -6,4 +6,4 @@ The implementation design was inspired by [Plug Addons Uplabs](https://www.uplab
 
 ## Screenshot
 
-![alt text](./src/assets/landing.png)
+![Landing Page](./src/assets/landing-page.png)
