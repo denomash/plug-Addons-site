@@ -9,7 +9,9 @@ const Header = () => {
             {/* <div className="header__clip"></div> */}
             <div className="header__top container">
                 <div className="header__logo">
-                    <img className='logo' src={logo} alt='logo' />
+                    <div className='logo__container'>
+                        <img className='logo' src={logo} alt='logo' />
+                    </div>
                     <span className="header__logo--text">PlugAddons</span>
                 </div>
                 <div className="header__nav">
