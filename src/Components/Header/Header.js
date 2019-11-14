@@ -1,4 +1,6 @@
 import React from 'react'
+
+import logo from '../../assets/logo.png'
 import './header.css'
 
 const Header = () => {
@@ -7,6 +9,7 @@ const Header = () => {
             {/* <div className="header__clip"></div> */}
             <div className="header__top container">
                 <div className="header__logo">
+                    <img className='logo' src={logo} alt='logo' />
                     <span className="header__logo--text">PlugAddons</span>
                 </div>
                 <div className="header__nav">
