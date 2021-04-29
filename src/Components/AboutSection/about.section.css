@@ -111,6 +111,10 @@
   align-items: center;
 }
 
+.about-cards__content:not(:last-child) {
+  margin-right: 6px;
+}
+
 .about-cards__content--top {
   align-items: center;
   justify-content: center;
