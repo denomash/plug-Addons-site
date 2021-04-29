@@ -106,3 +106,34 @@
 .transform {
   transform: translateY(35px);
 }
+
+@media screen and (max-width: 940px) {
+  .business__cards-col {
+    flex-wrap: wrap;
+  }
+
+  .business__info-content {
+    width: 100%;
+  }
+
+  .transform {
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .business__info {
+    justify-content: center;
+  }
+
+  .business__info p {
+    width: fit-content;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .business__card,
+  .business__card-2 {
+    width: 86%;
+  }
+}

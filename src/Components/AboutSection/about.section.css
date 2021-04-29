@@ -160,3 +160,44 @@
   height: 0px;
   width: 0px;
 }
+
+@media screen and (max-width: 1050px) {
+  .about-section {
+    padding-bottom: 100px;
+    height: auto;
+  }
+
+  .numbered-cards {
+    display: none;
+  }
+
+  .dot-container,
+  .line-dots {
+    display: none;
+  }
+
+  .about-cards {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .about-cards__content {
+    width: 330px;
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-section__content {
+    flex-direction: column;
+  }
+
+  .about-section__content--img {
+    height: 352px;
+    width: 100%;
+  }
+
+  .about-section__content--info {
+    width: 88%;
+  }
+}

@@ -4,7 +4,7 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
@@ -114,4 +114,18 @@ body {
 
 .to-white {
   color: #ffffff !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 76%;
+    padding: unset;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 85%;
+    padding: unset;
+  }
 }

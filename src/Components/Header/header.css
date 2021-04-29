@@ -5,11 +5,11 @@
       rgba(20, 35, 65, 0.6),
       rgba(15, 90, 115, 1)
     ),
-    url('../../assets/businessman.jpg') no-repeat;
+    url("../../assets/businessman.jpg") no-repeat;
   background-size: cover;
   background-position: top;
   height: 88vh;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 /* .header__clip { */
@@ -97,4 +97,59 @@
 .header__content--info {
   font-size: 15px;
   font-weight: 300;
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    height: 56vh;
+  }
+
+  .header__content {
+    font-size: 26px;
+    width: 60%;
+    left: 20vw;
+    top: 170px;
+  }
+
+  .header__content--info {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__nav {
+    padding-top: 12px;
+  }
+  .header {
+    height: 70vh;
+  }
+  .header__content {
+    top: 140px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header__nav li {
+    font-size: 10px;
+  }
+
+  .header__content {
+    width: 86%;
+    left: 32px;
+  }
+
+  .header__content--info {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header__nav li {
+    font-size: 10px;
+    padding: 0 6px 0 6px;
+  }
 }

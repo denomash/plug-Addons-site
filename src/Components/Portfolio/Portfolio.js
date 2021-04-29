@@ -28,7 +28,7 @@ const Portfolio = () => {
 
                     <div  className='portfolio-section__projects-row'>
                         <div className='portfolio-section__projects-row--num'>245</div>
-                        <p className='portfolio-section__projects-row--desc'>Happy Clientsn</p>
+                        <p className='portfolio-section__projects-row--desc'>Happy Clients</p>
                     </div>
                 </div>
                 
