@@ -1,17 +1,15 @@
 import React from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Main from '../Components/Main';
-import NotFound from '../Components/NotFound';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Main from '../Components/Main'
+import NotFound from '../Components/NotFound'
 
-const AppRoutes = () => 
-   (
-       <BrowserRouter>
-        <Switch>
-            <Route exact path='/' component={Main} />
-            <Route component={NotFound} />
-
-        </Switch>
-       </BrowserRouter>
-   )
+const AppRoutes = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Main />} />
+      <Route path='*' element={<NotFound />} />
+    </Routes>
+  </BrowserRouter>
+)
 
 export default AppRoutes

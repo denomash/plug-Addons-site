@@ -6,62 +6,44 @@ import growth from '../../assets/growth.svg'
 import moneyBag from '../../assets/money-bag.svg'
 import profit from '../../assets/profit.svg'
 import Card from './Card'
+import useReveal from '../../hooks/useReveal'
+
+const CARDS = [
+    { title: 'Meeting', avatar: meeting, highlighted: true },
+    { title: 'Business Growth', avatar: growth },
+    { title: 'Investment', avatar: moneyBag },
+    { title: 'Profit', avatar: profit },
+]
 
 const BusinessCards = () => {
+    const headRef = useReveal()
+    const infoRef = useReveal()
+
     return (
-        <div className='business-section container u-margin-bottom-big'>
+        <section className='business-section container u-margin-bottom-big'>
             <div className='u-margin-bottom-medium'>
-                <h3 className='business__header u-margin-bottom-medium'>Our Business</h3>
-                
-                <div className='business__info u-center-text'>
-
-                    <p className='business__info-content u-center-text'>
-                        Lorem ipsum dolor sit amet, consectetur 
-                        adipiscing elit, sed do eiusmod tempor incididunt 
-                        ut labore et dolore magna aliqua. Ut enim ad minim 
-                        veniam, quis nostrud exercitation ullamco laboris 
-                        nisi ut aliquip ex ea commodo consequat. Ut enim ad minim 
-                        veniam, quis nostrud exercitation ullamco laboris 
-                        nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-
-                
+                <h3 ref={headRef} className='reveal business__header u-margin-bottom-medium'>
+                    Our Business
+                </h3>
+                <p ref={infoRef} className='reveal business__intro u-center-text'>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                </p>
             </div>
 
-            <div className='business__cards-col'>
-                {/* First 2 cards */}
-                <div className='business__cards-item'>
-                    <div  className='business__card-section business__info-content u-margin-bottom-medium'>
-
-                        <div className='business__card'>
-                            <div className='business__card-img u-margin-bottom-small'>
-                                <img className='business__card-avatar' src={meeting} alt='meeting' />
-                            </div>
-                            <div className='business__card-header u-margin-bottom-small'>
-                                Meeting
-                            </div>
-                            <div className='business__card-content'>
-                                Lorem ipsum dolor sit amet, consectetur 
-                                adipiscing elit, sed do eiusmod tempor incididunt 
-                                ut labore et dolore magna aliqua.
-                            </div>
-
-                        </div>
-                        </div>
-
-                    <Card avatar={growth} title='Business Groth' />
-
-                </div>
-
-                {/* Following 2 cards */}
-                <div className='business__cards-item transform' >
-                     <Card avatar={moneyBag} title='Investment' />
-                     <Card avatar={profit} title='Profit' />
-                </div>
+            <div className='business__grid'>
+                {CARDS.map((card, idx) => (
+                    <Card
+                        key={card.title}
+                        avatar={card.avatar}
+                        title={card.title}
+                        highlighted={card.highlighted}
+                        delay={idx + 1}
+                    />
+                ))}
             </div>
-
-        </div>
+        </section>
     )
 }
 

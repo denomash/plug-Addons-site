@@ -8,94 +8,71 @@ import lock from '../../assets/lock.svg'
 import location from '../../assets/location.svg'
 
 import AboutCards from './AboutCards'
+import useReveal from '../../hooks/useReveal'
+
+const SERVICES = [
+    { num: '01', label: 'Strategy' },
+    { num: '02', label: 'Design' },
+    { num: '03', label: 'Development' },
+    { num: '04', label: 'Support' },
+]
+
+const FEATURES = [
+    { title: 'Team', avatar: team },
+    { title: 'Cloud', avatar: cloud },
+    { title: 'Secure', avatar: lock },
+    { title: 'Location', avatar: location },
+]
+
+const NumberedCard = ({ num, label, delay }) => {
+    const ref = useReveal()
+    return (
+        <div ref={ref} className='reveal numbered-card' data-delay={delay}>
+            <div className='numbered'>{num}</div>
+            <div className='numbered-service'>{label}</div>
+        </div>
+    )
+}
 
 const AboutBusiness = () => {
+    const imgRef = useReveal()
+    const copyRef = useReveal()
+
     return (
-        <div className='about-section'>
+        <section className='about-section'>
             <div className='container'>
-                <div className='about-section__content u-margin-top-big u-margin-bottom-big'>
-                    <div className='about-section__content--img'>
-                        <img className='about-section__content--avatar' src={aboutImg} alt='about image' />
+                <div className='about-section__content'>
+                    <div ref={imgRef} className='reveal reveal--left about-section__media'>
+                        <img className='about-section__media-img' src={aboutImg} alt='About our business' />
                     </div>
-                    <div className='about-section__content--info'>
-                        <h3 className='business__header u-margin-bottom-medium u-margin-top-small'>About Our Business</h3>
-                        <p className='business__info u-margin-bottom-medium'>
-                            Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua. Ut enim ad minim 
-                            veniam, quis nostrud exercitation ullamco laboris 
-                            nisi ut aliquip ex ea 
+                    <div ref={copyRef} className='reveal reveal--right about-section__copy'>
+                        <h3 className='business__header u-margin-bottom-medium'>About Our Business</h3>
+                        <p className='about-section__paragraph'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud exercitation ullamco laboris.
                         </p>
-
-                        <p className='business__info u-margin-bottom-medium'>
-                            Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua. Ut enim ad minim 
-                            veniam, quis nostrud exercitation ullamco laboris 
-                            nisi ut aliquip ex ea 
+                        <p className='about-section__paragraph'>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua.
                         </p>
-
-                        <p className='business__info u-margin-bottom-medium'>
-                            Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor incididunt 
-                            ut labore et dolore magna aliqua. 
-                            
-                        </p>
-
-                        <div className='btn-about btn-yellow'>See More</div>
-                    </div>
-
-                </div>
-
-                {/* Numbered Cards */}
-                <div className='numbered-cards u-margin-bottom-big'>
-                    <div className='numbered-card'>
-                        <div className='numbered'>01</div>
-                        <div className='numbered-service'>Service1</div>
-                    </div>
-
-                    <div className='numbered-card'>
-                        <div className='numbered'>02</div>
-                        <div className='numbered-service'>Service1</div>
-                    </div>
-
-                    <div className='numbered-card'>
-                        <div className='numbered'>05</div>
-                        <div className='numbered-service'>Service1</div>
-                    </div>
-
-                    <div className='numbered-card'>
-                        <div className='numbered'>04</div>
-                        <div className='numbered-service'>Service1</div>
+                        <button className='btn-about btn-yellow'>See More</button>
                     </div>
                 </div>
 
-                <div className='line-dots u-margin-bottom-big'>
-                    <div className='dot-container'>
-                    <div className='dot'></div>
-                    <div className='dot'></div>
-                    <div className='dot'></div>
-                    <div className='dot'></div>
-                    </div>
-                    <div className='line'></div>
+                <div className='numbered-cards'>
+                    {SERVICES.map((s, idx) => (
+                        <NumberedCard key={s.num} num={s.num} label={s.label} delay={idx + 1} />
+                    ))}
                 </div>
 
-                {/* About business cards */}
                 <div className='about-cards'>
-                    <AboutCards title='Team' avatar ={team} />
-                    <AboutCards title='Cloud' avatar ={cloud} />
-                    <AboutCards title='Secure' avatar ={lock}  />
-                    <AboutCards title='Location' avatar ={location}  />
-
+                    {FEATURES.map((f, idx) => (
+                        <AboutCards key={f.title} title={f.title} avatar={f.avatar} delay={idx + 1} />
+                    ))}
                 </div>
-
-
             </div>
-
-            
-            
-            
-        </div>
+        </section>
     )
 }
 

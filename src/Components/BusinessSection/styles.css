@@ -1,139 +1,127 @@
 .business-section {
-  display: flex;
-  background: rgba(255, 255, 255, 1);
-  flex-direction: column;
+  background: #ffffff;
+  padding-top: 60px;
 }
 
 .business__header {
-  color: rgba(45, 45, 45, 1);
-
-  display: flex;
-  justify-content: center;
-  font-weight: 600;
+  color: var(--color-text-dark);
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(22px, 3vw, 30px);
+  position: relative;
+  padding-bottom: 14px;
 }
-.business__info {
-  display: flex;
-  color: rgba(156, 157, 157, 1);
-  line-height: 22px;
-  width: 100%;
-  justify-content: center;
+
+.business__header::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  margin: 14px auto 0;
+}
+
+.business__intro {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--color-text-light);
+  line-height: 1.7;
   font-weight: 300;
-  font-size: 15px;
+  font-size: clamp(14px, 1.4vw, 16px);
 }
 
-.business__info-content {
-  display: flex;
-  width: 70%;
-}
-
-.business__card-section {
-  display: flex;
-  justify-content: center;
+/* Cards grid */
+.business__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
 }
 
 .business__card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 32px 22px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 0px 20px 0px 20px;
-  width: 400px;
-  height: 245px;
-  background: rgba(233, 35, 67, 1);
-  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-med), box-shadow var(--transition-med),
+    background var(--transition-med);
 }
 
-.business__card-2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px 20px 0px 20px;
-  width: 400px;
-  height: 245px;
-  background: rgba(255, 255, 255, 1);
-  border-radius: 10px;
-  box-shadow: 0 3px 6px rgba(45, 45, 45, 0.2);
+.business__card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+}
+
+.business__card--primary {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 12px 30px rgba(233, 35, 67, 0.35);
+}
+
+.business__card--primary:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Lift the highlighted card on wider screens for visual rhythm */
+@media (min-width: 940px) {
+  .business__grid > :nth-child(1),
+  .business__grid > :nth-child(3) {
+    transform: translateY(0);
+  }
+  .business__grid > :nth-child(2),
+  .business__grid > :nth-child(4) {
+    transform: translateY(28px);
+  }
+  .business__grid > :nth-child(2):hover,
+  .business__grid > :nth-child(4):hover {
+    transform: translateY(18px);
+  }
 }
 
 .business__card-img {
-  color: rgba(255, 255, 255, 1);
-  height: 40px;
-  width: 40px;
+  height: 52px;
+  width: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: transform var(--transition-med);
+}
+
+.business__card:hover .business__card-img {
+  transform: rotate(-6deg) scale(1.08);
 }
 
 .business__card-avatar {
   height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
-.business__card-header {
-  display: flex;
-  color: rgba(255, 255, 255, 1);
+.business__card-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  letter-spacing: 0.3px;
 }
 
-.business__card-header-2 {
-  display: flex;
-  color: rgba(85, 87, 87, 1);
+.business__card--primary .business__card-title {
+  color: #ffffff;
 }
 
 .business__card-content {
-  display: flex;
-  color: rgba(255, 255, 255, 1);
+  font-size: 14px;
   font-weight: 300;
-  font-size: 15px;
-  text-align: center;
+  line-height: 1.65;
+  color: var(--color-text-light);
 }
 
-.business__card-content-2 {
-  display: flex;
-  color: rgba(156, 157, 157, 1);
-  font-weight: 300;
-  font-size: 15px;
-  text-align: center;
-}
-
-.business__cards-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.business__cards-item {
-  display: flex;
-  flex-direction: column;
-}
-
-.transform {
-  transform: translateY(35px);
-}
-
-@media screen and (max-width: 940px) {
-  .business__cards-col {
-    flex-wrap: wrap;
-  }
-
-  .business__info-content {
-    width: 100%;
-  }
-
-  .transform {
-    transform: translateY(0);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .business__info {
-    justify-content: center;
-  }
-
-  .business__info p {
-    width: fit-content;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .business__card,
-  .business__card-2 {
-    width: 86%;
-  }
+.business__card--primary .business__card-content {
+  color: rgba(255, 255, 255, 0.92);
 }

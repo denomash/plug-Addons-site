@@ -1,21 +1,48 @@
 import React from 'react'
 import './contact.section.css'
+import useReveal from '../../hooks/useReveal'
 
 const ContactSection = () => {
+    const headRef = useReveal()
+    const formRef = useReveal()
+
     return (
-        <div className='contact-section'>
+        <section className='contact-section'>
             <div className='contact-section__container container'>
-                <div className='contact-section__header'>Instant Contact</div>
-                <div className='contact-section__form u-margin-top-big'>
-                    <input className='contact-section__form--input' type='text' id='name' placeholder='Name' />
-                    <input className='contact-section__form--input' type='email' id='email' placeholder='Email Adress' />
-                    <input className='contact-section__form--input' type='text' id='phone' placeholder='Phone' />
-                    <div className='contact-section__form--btn'>Sign Up Now</div>
-
-                </div>
-
+                <h2 ref={headRef} className='reveal contact-section__header'>
+                    Instant Contact
+                </h2>
+                <form
+                    ref={formRef}
+                    className='reveal contact-section__form'
+                    onSubmit={(e) => e.preventDefault()}
+                >
+                    <input
+                        className='contact-section__form--input'
+                        type='text'
+                        name='name'
+                        placeholder='Name'
+                        required
+                    />
+                    <input
+                        className='contact-section__form--input'
+                        type='email'
+                        name='email'
+                        placeholder='Email Address'
+                        required
+                    />
+                    <input
+                        className='contact-section__form--input'
+                        type='tel'
+                        name='phone'
+                        placeholder='Phone'
+                    />
+                    <button type='submit' className='contact-section__form--btn'>
+                        Sign Up Now
+                    </button>
+                </form>
             </div>
-        </div>
+        </section>
     )
 }
 

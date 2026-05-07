@@ -1,23 +1,22 @@
 import React from 'react'
+import useReveal from '../../hooks/useReveal'
 
-const Card = (props) => {
+const Card = ({ avatar, title, content, highlighted, delay = 0 }) => {
+    const ref = useReveal()
+
     return (
-        <div  className='business__card-section business__info-content u-margin-bottom-medium'>
-
-            <div className='business__card-2'>
-                <div className='business__card-img u-margin-bottom-small'>
-                    <img className='business__card-avatar' src={props.avatar} alt='meeting' />
-                </div>
-                <div className='business__card-header-2 u-margin-bottom-small'>
-                    {props.title}
-                </div>
-                <div className='business__card-content-2'>
-                    Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit, sed do eiusmod tempor incididunt 
-                    ut labore et dolore magna aliqua.
-                </div>
-
+        <div
+            ref={ref}
+            className={`reveal business__card${highlighted ? ' business__card--primary' : ''}`}
+            data-delay={delay}
+        >
+            <div className='business__card-img'>
+                <img className='business__card-avatar' src={avatar} alt={title} />
             </div>
+            <div className='business__card-title'>{title}</div>
+            <p className='business__card-content'>
+                {content || `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`}
+            </p>
         </div>
     )
 }
